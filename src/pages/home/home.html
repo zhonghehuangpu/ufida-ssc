@@ -1,0 +1,130 @@
+<!--
+  Generated template for the Home page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+
+    <ion-navbar color="calm">
+
+        <ion-buttons left>
+
+            <button ion-button light menuToggle>
+                <ion-icon name="menu"></ion-icon>
+            </button>
+
+        </ion-buttons>
+
+        <ion-title>记账</ion-title>
+
+        <ion-buttons right>
+            <button ion-button light icon-only>
+                <ion-icon name="md-add"></ion-icon>
+            </button>
+        </ion-buttons>
+
+    </ion-navbar>
+
+
+</ion-header>
+
+
+<ion-content>
+
+    <ion-slides style="height: 59vw" [options]="slidesOptions">
+        <ion-slide>
+            <img src="assets/home/banner/1.png">
+        </ion-slide>
+        <ion-slide>
+            <img src="assets/home/banner/2.png">
+        </ion-slide>
+        <ion-slide>
+            <img src="assets/home/banner/3.png">
+        </ion-slide>
+    </ion-slides>
+
+    <ion-grid no-padding>
+        <ion-row>
+            <ion-col no-padding>
+                <button grid-button no-lines ion-item text-center detail-none>
+
+                    <ion-icon color="danger" name="car"></ion-icon>
+                    <h2>出行</h2>
+
+                </button>
+            </ion-col>
+            <ion-col no-padding>
+                <button grid-button no-lines ion-item text-center detail-none>
+
+                    <ion-icon color="primary" name="home"></ion-icon>
+                    <h2>住宿</h2>
+
+                </button>
+            </ion-col>
+            <ion-col no-padding>
+                <button grid-button no-lines ion-item text-center detail-none>
+
+                    <ion-icon color="secondary" name="pizza"></ion-icon>
+                    <h2>餐饮</h2>
+
+                </button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col no-padding>
+                <button grid-button no-lines ion-item text-center detail-none>
+
+                    <ion-icon color="calm" name="basket"></ion-icon>
+                    <h2>采购</h2>
+
+                </button>
+            </ion-col>
+            <ion-col no-padding>
+                <button grid-button no-lines ion-item text-center detail-none>
+
+                    <ion-icon style="color: orange;" name="logo-yen"></ion-icon>
+                    <h2>付款</h2>
+
+                </button>
+            </ion-col>
+            <ion-col no-padding>
+                <button grid-button no-lines ion-item text-center detail-none>
+
+                    <ion-icon style="color: blueviolet" name="logo-yen"></ion-icon>
+                    <h2>收款</h2>
+
+                </button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col no-padding>
+                <button grid-button no-lines ion-item text-center detail-none>
+
+                    <ion-icon color="primary" name="phone-portrait"></ion-icon>
+                    <h2>通讯</h2>
+
+                </button>
+            </ion-col>
+            <ion-col no-padding>
+                <button grid-button no-lines ion-item text-center detail-none>
+
+                    <ion-icon color="favorite" name="cart"></ion-icon>
+                    <h2>销售</h2>
+
+                </button>
+            </ion-col>
+            <ion-col no-padding>
+                <button grid-button no-lines ion-item text-center detail-none>
+
+                    <ion-icon color="calm" name="keypad"></ion-icon>
+                    <h2>其他</h2>
+
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+
+</ion-content>

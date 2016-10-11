@@ -1,0 +1,67 @@
+<ion-menu [content]="content">
+
+    <ion-content class="menu">
+
+        <div margin></div>
+        <button ion-item no-lines detail-push>
+
+            <ion-thumbnail item-left>
+                <img src="assets/menu/user-default.png">
+            </ion-thumbnail>
+
+            <h2>15311621031</h2>
+            <p>zhaojmc@yonyou.com</p>
+
+            <p><strong color="dark">用友网络科技股份有限公司</strong></p>
+            <p>共享服务－移动开发部</p>
+
+        </button>
+
+        <div margin></div>
+
+        <ion-list no-lines class="menu-list">
+
+            <ion-list-header>
+                共享服务－移动开发部
+            </ion-list-header>
+
+            <button color="dark" light ion-item menu-button>
+                <ion-icon name="bookmark" item-left></ion-icon>
+                标签管理
+            </button>
+
+            <button color="dark" light ion-item menu-button>
+                <ion-icon name="ios-refresh-circle-outline" item-left></ion-icon>
+                数据同步
+            </button>
+
+            <button color="dark" light ion-item menu-button>
+                <ion-icon name="link" item-left></ion-icon>
+                功能简介
+            </button>
+
+            <button color="dark" light ion-item menu-button>
+                <ion-icon name="bulb" item-left></ion-icon>
+                新手帮助
+            </button>
+
+            <button color="dark" light ion-item menu-button>
+                <ion-icon name="ios-information-circle-outline" item-left></ion-icon>
+                投诉建议
+            </button>
+
+            <button color="dark" light ion-item menu-button>
+                <ion-icon name="ios-exit" item-left></ion-icon>
+                安全退出
+            </button>
+
+
+        </ion-list>
+
+
+    </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

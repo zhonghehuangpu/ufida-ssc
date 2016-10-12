@@ -15,7 +15,13 @@ import {Self} from "../pages/self/self";
         Self
     ],
     imports: [
-        IonicModule.forRoot(MyApp)
+        IonicModule.forRoot(MyApp, {
+            platforms: {
+                ios: {
+                    backButtonText: '  ',
+                }
+            }
+        })
     ],
     bootstrap: [IonicApp],
     entryComponents: [

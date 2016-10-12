@@ -5,6 +5,10 @@ import {Tabs} from "../pages/tabs/tabs";
 import {Home} from "../pages/home/home";
 import {Bill} from "../pages/bill/bill";
 import {Self} from "../pages/self/self";
+import {PersonInfo} from "../pages/menuOptions/person-info/person-info";
+
+
+const menuOptionPages = [PersonInfo];
 
 @NgModule({
     declarations: [
@@ -12,7 +16,8 @@ import {Self} from "../pages/self/self";
         Tabs,
         Home,
         Bill,
-        Self
+        Self,
+        ...menuOptionPages
     ],
     imports: [
         IonicModule.forRoot(MyApp, {
@@ -29,7 +34,8 @@ import {Self} from "../pages/self/self";
         Tabs,
         Home,
         Bill,
-        Self
+        Self,
+        ...menuOptionPages
     ],
     providers: []
 })

@@ -3,7 +3,7 @@
     <ion-content class="menu" padding-top>
 
         <div style="min-height: 25vh;" margin-top>
-            <button ion-item no-lines detail-push>
+            <button ion-item no-lines detail-push (click)="pushPage(personInfo);" menuClose>
 
                 <ion-thumbnail item-left>
                     <img src="assets/menu/user-default.png">
@@ -22,7 +22,7 @@
 
             <ion-list no-lines style="margin: 0;">
 
-                <button color="dark" light ion-item menu-button>
+                <button color="dark" light ion-item menu-button menuClose>
                     <ion-icon name="bookmark" item-left></ion-icon>
                     标签管理
                 </button>
@@ -32,22 +32,22 @@
                     数据同步
                 </button>
 
-                <button color="dark" light ion-item menu-button>
+                <button color="dark" light ion-item menu-button menuClose>
                     <ion-icon name="link" item-left></ion-icon>
                     功能简介
                 </button>
 
-                <button color="dark" light ion-item menu-button>
+                <button color="dark" light ion-item menu-button menuClose>
                     <ion-icon name="bulb" item-left></ion-icon>
                     新手帮助
                 </button>
 
-                <button color="dark" light ion-item menu-button>
+                <button color="dark" light ion-item menu-button menuClose>
                     <ion-icon name="ios-information-circle-outline" item-left></ion-icon>
                     投诉建议
                 </button>
 
-                <button color="dark" light ion-item menu-button>
+                <button color="dark" light ion-item menu-button menuClose>
                     <ion-icon name="ios-exit" item-left></ion-icon>
                     安全退出
                 </button>

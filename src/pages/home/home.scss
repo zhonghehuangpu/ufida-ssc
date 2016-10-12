@@ -3,7 +3,7 @@ page-home {
   [grid-button] {
 
     &.activated {
-      background-color: transparent;
+      background-color: rgba(0, 0, 0, .05);
     }
 
     ion-icon {

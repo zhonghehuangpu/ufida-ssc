@@ -14,16 +14,12 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 .menu {
-  .menu-list {
-    margin: 0 0;
+  .menu-list-bg {
 
     background: -webkit-linear-gradient(0deg, #007aff, #03c0ff);
     background: -moz-linear-gradient(0deg, #007aff, #03c0ff);
     background: linear-gradient(0deg, #007aff, #03c0ff);
 
-    min-height: -webkit-calc(100vh - 124px);
-    min-height: calc(100vh - 124px);
-    min-height: -moz-calc(100vh - 124px);
   }
 
   [menu-button] {

@@ -14,7 +14,7 @@
 
         <ion-buttons left>
 
-            <button ion-button light icon-only class="bar-button-menutoggle">
+            <button ion-button light icon-only class="bar-button-menutoggle" (click)="openDataTime(datetime)">
                 <ion-icon name="ios-calendar-outline"></ion-icon>
             </button>
 
@@ -35,6 +35,11 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+
+    <ion-datetime #datetime displayFormat="YYYY-MM" min="1990" max="2099-12" doneText="确定"
+                  cancelText="取消"
+                  [(ngModel)]="filterDate">
+    </ion-datetime>
 
 </ion-content>

@@ -6,9 +6,13 @@ import {Home} from "../pages/home/home";
 import {Bill} from "../pages/bill/bill";
 import {Self} from "../pages/self/self";
 import {PersonInfo} from "../pages/menuOptions/person-info/person-info";
+import {OptionIntroduce} from "../pages/menuOptions/option-introduce/option-introduce";
+import {ComplaintSuggest} from "../pages/menuOptions/complaint-suggest/complaint-suggest";
+import {LabelManager} from "../pages/menuOptions/label-manager/label-manager";
+import {BeginnerHelp} from "../pages/menuOptions/beginner-help/beginner-help";
 
 
-const menuOptionPages = [PersonInfo];
+const menuOptionPages = [PersonInfo, OptionIntroduce, BeginnerHelp, LabelManager, ComplaintSuggest];
 
 @NgModule({
     declarations: [

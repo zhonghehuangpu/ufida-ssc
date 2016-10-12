@@ -1,5 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
-import {Nav, Platform} from 'ionic-angular';
+import {Nav, Platform, ToastController} from 'ionic-angular';
 import {StatusBar, Splashscreen} from 'ionic-native';
 import {Tabs} from "../pages/tabs/tabs";
 import {PersonInfo} from "../pages/menuOptions/person-info/person-info";
@@ -29,7 +29,7 @@ export class MyApp {
     complaintSuggest = ComplaintSuggest;
 
 
-    constructor(public platform: Platform) {
+    constructor(public platform: Platform, public toastCtrl: ToastController) {
 
         this.initializeApp();
 
@@ -49,6 +49,15 @@ export class MyApp {
 
     pushPage(page: any) {
         this.nav.push(page);
+    }
+
+    dataSynchronization() {
+        let toast = this.toastCtrl.create({
+            message: '数据同步成功',
+            duration: 3000,
+            position: 'top'
+        });
+        toast.present();
     }
 
 }

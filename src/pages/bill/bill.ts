@@ -188,7 +188,80 @@ export class Bill {
 
     ];
 
-    billDataListOfLabelType = [];
+    billDataListOfLabelType = [
+        {
+            type: '用户调研',
+            date: "2016-12-01 至 2017-01-01",
+            position: '北京，云南',
+            amount: '$6,800.00',
+            list: [
+                {
+                    type: "飞机",
+                    info: "上海－北京",
+                    amount: "$1,600.00",
+                    icon: 'ios-plane-outline',
+                    badges: ['重要', '临时']
+                },
+                {
+                    type: "住宿",
+                    info: "如家酒店 4晚",
+                    amount: "$950.00",
+                    icon: 'ios-home-outline',
+                    badges: ['重要']
+                },
+                {
+                    type: "餐饮",
+                    info: "团建",
+                    amount: "$1,500.00",
+                    icon: 'ios-pizza-outline',
+                    badges: ['临时']
+                },
+                {
+                    type: "通讯",
+                    info: "季度通讯费用",
+                    amount: "$1,500.00",
+                    icon: 'ios-phone-portrait-outline',
+                    badges: ['重要', '临时']
+                }
+            ]
+        },
+        {
+            type: '用户调研',
+            date: "2016-12-01 至 2017-01-01",
+            position: '北京，云南',
+            amount: '$6,800.00',
+            list: [
+                {
+                    type: "飞机",
+                    info: "上海－北京",
+                    amount: "$1,600.00",
+                    icon: 'ios-plane-outline',
+                    badges: ['重要', '临时']
+                },
+                {
+                    type: "住宿",
+                    info: "如家酒店 4晚",
+                    amount: "$950.00",
+                    icon: 'ios-home-outline',
+                    badges: ['重要']
+                },
+                {
+                    type: "餐饮",
+                    info: "团建",
+                    amount: "$1,500.00",
+                    icon: 'ios-pizza-outline',
+                    badges: ['临时']
+                },
+                {
+                    type: "通讯",
+                    info: "季度通讯费用",
+                    amount: "$1,500.00",
+                    icon: 'ios-phone-portrait-outline',
+                    badges: ['重要', '临时']
+                }
+            ]
+        }
+    ];
 
     constructor(public navCtrl: NavController, public popoverController: PopoverController) {
     }
@@ -202,6 +275,14 @@ export class Bill {
         this.billDataListOfDateType[i].list.splice(j, 1);
     }
 
+    deleteBillOfLabel(i: number, j: number) {
+        console.log(i + "," + j);
+        this.billDataListOfLabelType[i].list.splice(j, 1);
+    }
+
+    deleteAllBillOfLabel(i) {
+        this.billDataListOfLabelType.splice(i, 1);
+    }
 
     doInfiniteOfFilterDate($event) {
         console.log('Begin async operation');
@@ -236,6 +317,55 @@ export class Bill {
                             type: "通讯",
                             info: "季度通讯费用",
                             amount: "$1500",
+                            icon: 'ios-phone-portrait-outline',
+                            badges: ['重要', '临时']
+                        }
+                    ]
+                });
+            }
+
+            console.log('Async operation has ended');
+
+            $event.complete();
+        }, 500);
+    }
+
+    doInfiniteOfFilterLabel($event) {
+        console.log('Begin async operation');
+
+        setTimeout(() => {
+            for (var i = 0; i < 5; i++) {
+                this.billDataListOfLabelType.push({
+                    type: '用户调研',
+                    date: "2016-12-01 至 2017-01-01",
+                    position: '北京，云南',
+                    amount: '$6,800.00',
+                    list: [
+                        {
+                            type: "飞机",
+                            info: "上海－北京",
+                            amount: "$1,600.00",
+                            icon: 'ios-plane-outline',
+                            badges: ['重要', '临时']
+                        },
+                        {
+                            type: "住宿",
+                            info: "如家酒店 4晚",
+                            amount: "$950.00",
+                            icon: 'ios-home-outline',
+                            badges: ['重要']
+                        },
+                        {
+                            type: "餐饮",
+                            info: "团建",
+                            amount: "$1,500.00",
+                            icon: 'ios-pizza-outline',
+                            badges: ['临时']
+                        },
+                        {
+                            type: "通讯",
+                            info: "季度通讯费用",
+                            amount: "$1,500.00",
                             icon: 'ios-phone-portrait-outline',
                             badges: ['重要', '临时']
                         }

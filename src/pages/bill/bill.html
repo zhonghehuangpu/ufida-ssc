@@ -6,22 +6,34 @@
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+
+<ion-datetime #_DATETIME_COMPONENT style="display: none;" displayFormat="YYYY-MM" min="1990" max="2099-12"
+              doneText="确定"
+              cancelText="取消"
+              [(ngModel)]="filterDate">
+</ion-datetime>
+
 <ion-header>
 
 
     <ion-navbar color="calm">
 
-
         <ion-buttons left>
 
-            <button ion-button light icon-only class="bar-button-menutoggle" (click)="openDataTime(datetime)">
+            <button ion-button light icon-only class="bar-button-menutoggle"
+                    (click)="openDataTime(_DATETIME_COMPONENT)">
                 <ion-icon name="ios-calendar-outline"></ion-icon>
+                <span style="font-size: 1rem;vertical-align: middle;" [hidden]="false">
+                （{{filterDate}}）
+                </span>
             </button>
 
         </ion-buttons>
 
 
-        <ion-title>报帐</ion-title>
+        <ion-title>
+            报帐
+        </ion-title>
 
         <ion-buttons right>
             <button ion-button light icon-only>
@@ -37,9 +49,5 @@
 
 <ion-content>
 
-    <ion-datetime #datetime displayFormat="YYYY-MM" min="1990" max="2099-12" doneText="确定"
-                  cancelText="取消"
-                  [(ngModel)]="filterDate">
-    </ion-datetime>
 
 </ion-content>

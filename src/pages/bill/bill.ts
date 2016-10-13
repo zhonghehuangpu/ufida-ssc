@@ -14,7 +14,7 @@ import {NavController} from 'ionic-angular';
 export class Bill {
 
 
-    filterDate: string;
+    filterDate: string = "2016-10";
 
     constructor(public navCtrl: NavController) {
     }
@@ -25,13 +25,7 @@ export class Bill {
 
     openDataTime(datetime: Element) {
 
-        console.log(datetime);
-
-        var e = document.createEvent('MouseEvent');
-        e.initEvent('click', false, false);
-
-        datetime._elementRef.nativeElement.click()
-        datetime._elementRef.nativeElement.dispatchEvent(e);
+        datetime.open();
 
     }
 

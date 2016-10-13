@@ -47,7 +47,54 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content class="content-view">
+
+
+    <div [ngSwitch]="billViewFilterType">
+        <div *ngSwitchCase="'date'">
+            <div *ngFor="let billDataItem of billDataListOfDateType;let i=index;">
+                <p *ngIf="billDataItem.list.length>0" text-center>{{billDataItem.date}}</p>
+
+                <ion-list>
+                    <ion-item-sliding *ngFor="let billData of billDataItem.list;let j=index;">
+                        <ion-item>
+                            <ion-icon [name]="billData.icon" item-left color="calm"></ion-icon>
+
+                            <h2>
+                                {{billData.type}}
+                                <ion-badge *ngFor="let badge of billData.badges" color="calm">
+                                    {{badge}}
+                                </ion-badge>
+                            </h2>
+
+                            <p>{{billData.info}}</p>
+
+                            <ion-icon color="calm" item-right><span
+                                    style="font-size: 1.6rem;">{{billData.amount}}</span>
+                            </ion-icon>
+                        </ion-item>
+
+                        <ion-item-options side="right">
+                            <button ion-button icon-left color="danger" (click)="deleteBillOfDate(i,j)">
+                                <ion-icon name="ios-trash-outline"></ion-icon>
+                                删除
+                            </button>
+                            <button ion-button icon-left color="calm">
+                                <ion-icon name="ios-paper-outline"></ion-icon>
+                                报帐
+                            </button>
+                        </ion-item-options>
+
+                    </ion-item-sliding>
+                </ion-list>
+
+            </div>
+        </div>
+        <div *ngSwitchCase="'label'">
+            label
+        </div>
+
+    </div>
 
 
 </ion-content>

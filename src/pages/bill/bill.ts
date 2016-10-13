@@ -19,11 +19,154 @@ export class Bill {
 
     billViewFilterType: string = 'date';
 
+    billDataListOfDateType = [
+        {
+            date: "2016-12-12 星期四",
+            list: [
+                {
+                    type: "飞机",
+                    info: "上海－北京",
+                    amount: "$1600",
+                    icon: 'ios-plane-outline',
+                    badges: ['重要', '临时']
+                },
+                {
+                    type: "住宿",
+                    info: "如家酒店 4晚",
+                    amount: "$950",
+                    icon: 'ios-home-outline',
+                    badges: ['重要']
+                },
+                {
+                    type: "餐饮",
+                    info: "团建",
+                    amount: "$1500",
+                    icon: 'ios-pizza-outline',
+                    badges: ['临时']
+                },
+                {
+                    type: "通讯",
+                    info: "季度通讯费用",
+                    amount: "$1500",
+                    icon: 'ios-phone-portrait-outline',
+                    badges: ['重要', '临时']
+                }
+            ]
+        },
+        {
+            date: "2016-12-11 星期三",
+            list: [
+                {
+                    type: "飞机",
+                    info: "上海－北京",
+                    amount: "$1600",
+                    icon: 'ios-plane-outline',
+                    badges: ['重要', '临时']
+                },
+                {
+                    type: "住宿",
+                    info: "如家酒店 4晚",
+                    amount: "$950",
+                    icon: 'ios-home-outline',
+                    badges: ['重要']
+                },
+                {
+                    type: "餐饮",
+                    info: "团建",
+                    amount: "$1500",
+                    icon: 'ios-pizza-outline',
+                    badges: ['临时']
+                },
+                {
+                    type: "通讯",
+                    info: "季度通讯费用",
+                    amount: "$1500",
+                    icon: 'ios-phone-portrait-outline',
+                    badges: ['重要', '临时']
+                }
+            ]
+        },
+        {
+            date: "2016-12-10 星期二",
+            list: [
+                {
+                    type: "飞机",
+                    info: "上海－北京",
+                    amount: "$1600",
+                    icon: 'ios-plane-outline',
+                    badges: ['重要', '临时']
+                },
+                {
+                    type: "住宿",
+                    info: "如家酒店 4晚",
+                    amount: "$950",
+                    icon: 'ios-home-outline',
+                    badges: ['重要']
+                },
+                {
+                    type: "餐饮",
+                    info: "团建",
+                    amount: "$1500",
+                    icon: 'ios-pizza-outline',
+                    badges: ['临时']
+                },
+                {
+                    type: "通讯",
+                    info: "季度通讯费用",
+                    amount: "$1500",
+                    icon: 'ios-phone-portrait-outline',
+                    badges: ['重要', '临时']
+                }
+            ]
+        },
+        {
+            date: "2016-12-09 星期一",
+            list: [
+                {
+                    type: "飞机",
+                    info: "上海－北京",
+                    amount: "$1600",
+                    icon: 'ios-plane-outline',
+                    badges: ['重要', '临时']
+                },
+                {
+                    type: "住宿",
+                    info: "如家酒店 4晚",
+                    amount: "$950",
+                    icon: 'ios-home-outline',
+                    badges: ['重要']
+                },
+                {
+                    type: "餐饮",
+                    info: "团建",
+                    amount: "$1500",
+                    icon: 'ios-pizza-outline',
+                    badges: ['临时']
+                },
+                {
+                    type: "通讯",
+                    info: "季度通讯费用",
+                    amount: "$1500",
+                    icon: 'ios-phone-portrait-outline',
+                    badges: ['重要', '临时']
+                }
+            ]
+        }
+
+    ];
+
+    billDataListOfLabelType = [];
+
     constructor(public navCtrl: NavController, public popoverController: PopoverController) {
     }
 
     ionViewDidLoad() {
         console.log('Hello Bill Page');
+    }
+
+
+    deleteBillOfDate(i: number, j: number) {
+        this.billDataListOfDateType[i].list.splice(j, 1);
     }
 
     openDataTime(datetime: Element) {

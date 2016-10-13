@@ -11,7 +11,7 @@
         <ion-title>我的</ion-title>
 
         <ion-buttons end>
-            <button ion-button icon-only>
+            <button ion-button icon-only (click)="goToView(personalSetting)">
                 <ion-icon name="ios-settings-outline"></ion-icon>
             </button>
         </ion-buttons>
@@ -24,14 +24,14 @@
 <ion-content class="content-view" padding-vertical>
 
     <ion-list no-lines>
-        <ion-item no-lines>
+        <button ion-item no-lines (click)="goToView(personInfo)">
             <ion-thumbnail item-left>
                 <img src="assets/public/user-default.png">
             </ion-thumbnail>
             <h2>小明</h2>
             <p>邮箱：zhaojmc@yonyou.com</p>
             <p>电话：15311621031</p>
-        </ion-item>
+        </button>
     </ion-list>
 
 

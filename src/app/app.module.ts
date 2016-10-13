@@ -11,12 +11,13 @@ import {ComplaintSuggest} from "../pages/menuOptions/complaint-suggest/complaint
 import {LabelManager} from "../pages/menuOptions/label-manager/label-manager";
 import {BeginnerHelp} from "../pages/menuOptions/beginner-help/beginner-help";
 import {BillViewFilterPopover} from "../pages/billOptions/bill-view-filter-popover/bill-view-filter-popover";
+import {PersonalSetting} from "../pages/billOptions/personal-setting/personal-setting";
 
 
 const menuOptionPages = [PersonInfo, OptionIntroduce, BeginnerHelp, LabelManager, ComplaintSuggest];
 const billOptionPages = [BillViewFilterPopover];
 const homeOptionPages = [];
-const selfOptionPages = [];
+const selfOptionPages = [PersonalSetting];
 
 @NgModule({
     declarations: [

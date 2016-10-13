@@ -49,9 +49,14 @@
 
 <ion-content class="content-view">
 
+    <ion-refresher (ionRefresh)="doRefreshOfDateType($event)">
+        <ion-refresher-content pullingText="下拉刷新" refreshingText="亲爱的小主，我正在努力刷新..."></ion-refresher-content>
+    </ion-refresher>
+
 
     <div [ngSwitch]="billViewFilterType">
         <div *ngSwitchCase="'date'">
+
             <div *ngFor="let billDataItem of billDataListOfDateType;let i=index;">
                 <p *ngIf="billDataItem.list.length>0" text-center>{{billDataItem.date}}</p>
 
@@ -89,6 +94,11 @@
                 </ion-list>
 
             </div>
+
+            <ion-infinite-scroll (ionInfinite)="doInfiniteOfFilterDate($event)">
+                <ion-infinite-scroll-content loadingText="亲爱的小主，我正在努力家在..."></ion-infinite-scroll-content>
+            </ion-infinite-scroll>
+
         </div>
         <div *ngSwitchCase="'label'">
             label

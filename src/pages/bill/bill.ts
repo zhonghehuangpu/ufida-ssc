@@ -151,6 +151,39 @@ export class Bill {
                     badges: ['重要', '临时']
                 }
             ]
+        },
+        {
+            date: "2016-12-09 星期一",
+            list: [
+                {
+                    type: "飞机",
+                    info: "上海－北京",
+                    amount: "$1600",
+                    icon: 'ios-plane-outline',
+                    badges: ['重要', '临时']
+                },
+                {
+                    type: "住宿",
+                    info: "如家酒店 4晚",
+                    amount: "$950",
+                    icon: 'ios-home-outline',
+                    badges: ['重要']
+                },
+                {
+                    type: "餐饮",
+                    info: "团建",
+                    amount: "$1500",
+                    icon: 'ios-pizza-outline',
+                    badges: ['临时']
+                },
+                {
+                    type: "通讯",
+                    info: "季度通讯费用",
+                    amount: "$1500",
+                    icon: 'ios-phone-portrait-outline',
+                    badges: ['重要', '临时']
+                }
+            ]
         }
 
     ];
@@ -167,6 +200,63 @@ export class Bill {
 
     deleteBillOfDate(i: number, j: number) {
         this.billDataListOfDateType[i].list.splice(j, 1);
+    }
+
+
+    doInfiniteOfFilterDate($event) {
+        console.log('Begin async operation');
+
+        setTimeout(() => {
+            for (var i = 0; i < 5; i++) {
+                this.billDataListOfDateType.push({
+                    date: "2016-12-09 星期一",
+                    list: [
+                        {
+                            type: "飞机",
+                            info: "上海－北京",
+                            amount: "$1600",
+                            icon: 'ios-plane-outline',
+                            badges: ['重要', '临时']
+                        },
+                        {
+                            type: "住宿",
+                            info: "如家酒店 4晚",
+                            amount: "$950",
+                            icon: 'ios-home-outline',
+                            badges: ['重要']
+                        },
+                        {
+                            type: "餐饮",
+                            info: "团建",
+                            amount: "$1500",
+                            icon: 'ios-pizza-outline',
+                            badges: ['临时']
+                        },
+                        {
+                            type: "通讯",
+                            info: "季度通讯费用",
+                            amount: "$1500",
+                            icon: 'ios-phone-portrait-outline',
+                            badges: ['重要', '临时']
+                        }
+                    ]
+                });
+            }
+
+            console.log('Async operation has ended');
+
+            $event.complete();
+        }, 500);
+    }
+
+    doRefreshOfDateType($event) {
+        console.log('Begin async operation', $event);
+
+        setTimeout(() => {
+            console.log('Async operation has ended');
+            $event.complete();
+        }, 2000);
+
     }
 
     openDataTime(datetime: Element) {

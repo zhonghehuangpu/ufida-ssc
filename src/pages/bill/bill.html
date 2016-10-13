@@ -18,12 +18,12 @@
 
     <ion-navbar color="calm">
 
-        <ion-buttons left>
+        <ion-buttons left [hidden]="'date'!=billViewFilterType">
 
             <button ion-button light icon-only class="bar-button-menutoggle"
                     (click)="openDataTime(_DATETIME_COMPONENT)">
                 <ion-icon name="ios-calendar-outline"></ion-icon>
-                <span style="font-size: 1rem;vertical-align: middle;" [hidden]="false">
+                <span style="font-size: 1rem;vertical-align: middle;">
                 （{{filterDate}}）
                 </span>
             </button>
@@ -36,7 +36,7 @@
         </ion-title>
 
         <ion-buttons right>
-            <button ion-button light icon-only>
+            <button ion-button light icon-only (click)="showBillViewFilterPopover($event)">
                 <ion-icon name="ios-funnel-outline"></ion-icon>
             </button>
         </ion-buttons>

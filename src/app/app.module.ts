@@ -10,9 +10,13 @@ import {OptionIntroduce} from "../pages/menuOptions/option-introduce/option-intr
 import {ComplaintSuggest} from "../pages/menuOptions/complaint-suggest/complaint-suggest";
 import {LabelManager} from "../pages/menuOptions/label-manager/label-manager";
 import {BeginnerHelp} from "../pages/menuOptions/beginner-help/beginner-help";
+import {BillViewFilterPopover} from "../pages/billOptions/bill-view-filter-popover/bill-view-filter-popover";
 
 
 const menuOptionPages = [PersonInfo, OptionIntroduce, BeginnerHelp, LabelManager, ComplaintSuggest];
+const billOptionPages = [BillViewFilterPopover];
+const homeOptionPages = [];
+const selfOptionPages = [];
 
 @NgModule({
     declarations: [
@@ -21,7 +25,10 @@ const menuOptionPages = [PersonInfo, OptionIntroduce, BeginnerHelp, LabelManager
         Home,
         Bill,
         Self,
-        ...menuOptionPages
+        ...menuOptionPages,
+        ...billOptionPages,
+        ...homeOptionPages,
+        ...selfOptionPages
     ],
     imports: [
         IonicModule.forRoot(MyApp, {
@@ -39,7 +46,10 @@ const menuOptionPages = [PersonInfo, OptionIntroduce, BeginnerHelp, LabelManager
         Home,
         Bill,
         Self,
-        ...menuOptionPages
+        ...menuOptionPages,
+        ...billOptionPages,
+        ...homeOptionPages,
+        ...selfOptionPages
     ],
     providers: []
 })

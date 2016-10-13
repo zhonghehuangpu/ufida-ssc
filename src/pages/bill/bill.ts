@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
+import {NavController, PopoverController} from 'ionic-angular';
+import {BillViewFilterPopover} from "../billOptions/bill-view-filter-popover/bill-view-filter-popover";
 
 /*
  Generated class for the Bill page.
@@ -16,7 +17,9 @@ export class Bill {
 
     filterDate: string = "2016-10";
 
-    constructor(public navCtrl: NavController) {
+    billViewFilterType: string = 'date';
+
+    constructor(public navCtrl: NavController, public popoverController: PopoverController) {
     }
 
     ionViewDidLoad() {
@@ -26,6 +29,23 @@ export class Bill {
     openDataTime(datetime: Element) {
 
         datetime.open();
+
+    }
+
+    showBillViewFilterPopover($event) {
+
+        let popover = this.popoverController.create(BillViewFilterPopover, {billViewFilterType: this.billViewFilterType});
+
+        popover.present({
+            ev: $event
+        });
+
+        popover.onDidDismiss((data)=> {
+            if (data && data.billViewFilterType) {
+                this.billViewFilterType = data.billViewFilterType;
+            }
+            console.log(data);
+        });
 
     }
 

@@ -389,7 +389,7 @@ export class Bill {
 
     }
 
-    openDataTime(datetime: Element) {
+    openDataTime(datetime: any) {
 
         datetime.open();
 

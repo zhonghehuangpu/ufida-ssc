@@ -12,12 +12,17 @@ import {LabelManager} from "../pages/menuOptions/label-manager/label-manager";
 import {BeginnerHelp} from "../pages/menuOptions/beginner-help/beginner-help";
 import {BillViewFilterPopover} from "../pages/billOptions/bill-view-filter-popover/bill-view-filter-popover";
 import {PersonalSetting} from "../pages/billOptions/personal-setting/personal-setting";
+import {Login} from "../pages/security/login/login";
+import {Register} from "../pages/security/register/register";
+import {ForgetPassword} from "../pages/security/forget-password/forget-password";
+import {FillBillForTravel} from "../pages/homeOptions/fill-bill-for-travel/fill-bill-for-travel";
 
 
 const menuOptionPages = [PersonInfo, OptionIntroduce, BeginnerHelp, LabelManager, ComplaintSuggest];
 const billOptionPages = [BillViewFilterPopover];
-const homeOptionPages = [];
+const homeOptionPages = [FillBillForTravel];
 const selfOptionPages = [PersonalSetting];
+const securityOptionPages = [Login, Register, ForgetPassword]
 
 @NgModule({
     declarations: [
@@ -29,7 +34,8 @@ const selfOptionPages = [PersonalSetting];
         ...menuOptionPages,
         ...billOptionPages,
         ...homeOptionPages,
-        ...selfOptionPages
+        ...selfOptionPages,
+        ...securityOptionPages
     ],
     imports: [
         IonicModule.forRoot(MyApp, {
@@ -50,7 +56,8 @@ const selfOptionPages = [PersonalSetting];
         ...menuOptionPages,
         ...billOptionPages,
         ...homeOptionPages,
-        ...selfOptionPages
+        ...selfOptionPages,
+        ...securityOptionPages
     ],
     providers: []
 })

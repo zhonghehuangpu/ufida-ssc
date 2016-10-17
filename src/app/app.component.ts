@@ -1,6 +1,6 @@
 import {Component, ViewChild} from '@angular/core';
 import {Nav, Platform, ToastController} from 'ionic-angular';
-import {StatusBar, Splashscreen} from 'ionic-native';
+// import {StatusBar, Splashscreen} from 'ionic-native';
 import {Tabs} from "../pages/tabs/tabs";
 import {PersonInfo} from "../pages/menuOptions/person-info/person-info";
 import {BeginnerHelp} from "../pages/menuOptions/beginner-help/beginner-help";
@@ -38,11 +38,11 @@ export class MyApp {
     initializeApp() {
         this.platform.ready().then(() => {
 
-            StatusBar.styleDefault();
-
-            setTimeout(()=> {
-                Splashscreen.hide();
-            }, 300);
+            // StatusBar.styleDefault();
+            //
+            // setTimeout(()=> {
+            //     Splashscreen.hide();
+            // }, 300);
 
         });
     }

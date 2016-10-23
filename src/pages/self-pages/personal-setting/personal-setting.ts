@@ -5,6 +5,7 @@ import {BeginnerHelp} from "../../personal-setting-pages/beginner-help/beginner-
 import {LabelManager} from "../../personal-setting-pages/label-manager/label-manager";
 import {ComplaintSuggest} from "../../personal-setting-pages/complaint-suggest/complaint-suggest";
 import {PersonInfo} from "../person-info/person-info";
+import {Login} from "../../security-pages/login/login";
 
 /*
  Generated class for the PersonalSetting page.
@@ -46,6 +47,10 @@ export class PersonalSetting {
 
     ionViewDidLoad() {
         console.log('Hello PersonalSetting Page');
+    }
+
+    logOut() {
+        this.navCtrl.setRoot(Login)
     }
 
 }

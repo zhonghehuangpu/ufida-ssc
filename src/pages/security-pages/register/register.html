@@ -6,13 +6,39 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>register</ion-title>
-  </ion-navbar>
+    <ion-navbar color="calm">
+        <ion-title>注册</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="content-view" padding-top>
+
+    <ion-list>
+
+        <ion-item>
+            <ion-label style="min-width: 4rem;">+86</ion-label>
+            <ion-input type="text" clearInput></ion-input>
+            <button item-right ion-button color="calm">获取验证码</button>
+        </ion-item>
+
+        <ion-item>
+            <ion-label style="min-width: 4rem;">验证码</ion-label>
+            <ion-input type="number" clearInput></ion-input>
+        </ion-item>
+
+    </ion-list>
+
+    <div padding-horizontal>
+        <button ion-button block color="calm">下一步</button>
+    </div>
+
+    <ion-item-divider style="background-color: transparent;">
+        <p>
+            已有帐号，去 <a calm (click)="goLogin();">登录</a>
+        </p>
+    </ion-item-divider>
+
 
 </ion-content>

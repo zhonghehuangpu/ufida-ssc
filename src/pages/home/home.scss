@@ -2,15 +2,15 @@ page-home {
 
   [grid-button] {
 
-    padding-top: .8rem;
-    padding-bottom: .8rem;
+    padding-top: .6rem;
+    padding-bottom: .6rem;
 
     &.activated {
       background-color: rgba(0, 0, 0, .05);
     }
 
     ion-icon {
-      font-size: 3.3rem;
+      font-size: 3rem;
     }
   }
 

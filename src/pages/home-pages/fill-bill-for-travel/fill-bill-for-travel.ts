@@ -15,6 +15,9 @@ export class FillBillForTravel {
 
     postTypeSelectFlag: boolean = false;
 
+    startAddress: string;
+    endAddress: string;
+
     postType = {
         icon: 'ios-car',
         name: '打车',
@@ -43,6 +46,12 @@ export class FillBillForTravel {
         toast.present().then(()=> {
             this.navCtrl.pop();
         });
+    }
+
+    addressExchange() {
+        let address = this.startAddress;
+        this.startAddress = this.endAddress;
+        this.endAddress = address;
     }
 
 }

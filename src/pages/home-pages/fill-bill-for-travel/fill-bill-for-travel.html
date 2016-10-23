@@ -127,19 +127,19 @@
                         <ion-label color="primary">
                             <ion-icon name="ios-radio-button-on-outline" color="calm"></ion-icon>
                         </ion-label>
-                        <ion-input type="number" placeholder="请输入起点" clearInput></ion-input>
+                        <ion-input [(ngModel)]="startAddress" type="text" placeholder="请输入起点" clearInput></ion-input>
                     </ion-item>
 
                     <ion-item>
                         <ion-label color="primary">
                             <ion-icon name="ios-radio-button-on-outline" style="color: orange;"></ion-icon>
                         </ion-label>
-                        <ion-input type="number" placeholder="请输入终点" clearInput></ion-input>
+                        <ion-input [(ngModel)]="endAddress" type="text" placeholder="请输入终点" clearInput></ion-input>
                     </ion-item>
 
                 </ion-col>
 
-                <ion-col text-center no-padding center width-20>
+                <ion-col text-center no-padding center width-20 tappable (click)="addressExchange()">
                     <ion-icon
                             style="font-size: 3.2rem;-webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);-ms-transform: rotate(90deg);-o-transform: rotate(90deg);transform: rotate(90deg);"
                             name="ios-swap"></ion-icon>
@@ -160,6 +160,13 @@
             </ion-row>
 
         </ion-grid>
+
+        <ion-item>
+            <ion-label color="dark">
+                备注
+            </ion-label>
+            <ion-input type="text" placeholder="请输入备注" clearInput></ion-input>
+        </ion-item>
 
 
     </ion-list>

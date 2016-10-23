@@ -2,6 +2,8 @@ import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {PersonalSetting} from "../self-pages/personal-setting/personal-setting";
 import {PersonInfo} from "../self-pages/person-info/person-info";
+import {MyBills} from "../self-pages/my-bills/my-bills";
+import {ConsumptioAnalysis} from "../self-pages/consumptio-analysis/consumptio-analysis";
 
 /*
  Generated class for the Self page.
@@ -17,6 +19,9 @@ export class Self {
 
     personInfo = PersonInfo;
     personalSetting = PersonalSetting;
+    myBills = MyBills;
+    consumptioAnalysis = ConsumptioAnalysis;
+
 
     constructor(public navCtrl: NavController) {
     }

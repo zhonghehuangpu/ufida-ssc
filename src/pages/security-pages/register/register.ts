@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
+import {RegisterForSetPassword} from "../register-for-set-password/register-for-set-password";
 
 /*
  Generated class for the Register page.
@@ -22,6 +23,10 @@ export class Register {
 
     goLogin() {
         this.navCtrl.pop();
+    }
+
+    onNext() {
+        this.navCtrl.push(RegisterForSetPassword)
     }
 
 }

@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
+import {ForgetPasswordForSetPassword} from "../forget-password-for-set-password/forget-password-for-set-password";
 
 /*
  Generated class for the ForgetPassword page.
@@ -35,6 +36,10 @@ export class ForgetPassword {
         this.triggerFindTypeCard();
         this.findTypeView.name = name;
         this.findTypeView.icon = icon;
+    }
+
+    onNext() {
+        this.navCtrl.push(ForgetPasswordForSetPassword)
     }
 
 }

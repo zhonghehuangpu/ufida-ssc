@@ -1,5 +1,10 @@
 page-fill-bill-for-travel {
 
+  .grid-select {
+    border-bottom: 1px solid #dedede;
+    border-top: 1px solid #dedede;
+  }
+
   [grid-button] {
 
     &.activated {

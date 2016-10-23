@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
-import {NavController, MenuController} from 'ionic-angular';
-import {FillBillForTravel} from "../homeOptions/fill-bill-for-travel/fill-bill-for-travel";
+import {NavController} from 'ionic-angular';
+import {FillBillForTravel} from "../home-module/fill-bill-for-travel/fill-bill-for-travel";
 
 /*
  Generated class for the Home page.
@@ -19,17 +19,15 @@ export class Home {
 
     slidesOptions = {pager: true, loop: true, autoplay: 3000};
 
-    constructor(public navCtrl: NavController, public menuController: MenuController) {
+    constructor(public navCtrl: NavController) {
 
     }
 
     ionViewWillEnter() {
-        this.menuController.enable(true);
         console.log('ionViewWillEnter');
     }
 
     ionViewWillLeave() {
-        this.menuController.enable(false);
         console.log('ionViewWillLeave');
     }
 

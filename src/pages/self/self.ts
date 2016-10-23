@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
-import {PersonInfo} from "../menuOptions/person-info/person-info";
-import {PersonalSetting} from "../billOptions/personal-setting/personal-setting";
+import {PersonalSetting} from "../self-module/personal-setting/personal-setting";
+import {PersonInfo} from "../self-module/person-info/person-info";
 
 /*
  Generated class for the Self page.

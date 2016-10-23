@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {NavController, Tabs as IonicTabs, MenuController} from 'ionic-angular';
+import {NavController, Tabs as IonicTabs} from 'ionic-angular';
 import {Home} from "../home/home";
 import {Bill} from "../bill/bill";
 import {Self} from "../self/self";
@@ -23,7 +23,8 @@ export class Tabs {
     selfRoot = Self;
 
 
-    constructor(public navCtrl: NavController, public menuController: MenuController) {
+    constructor(public navCtrl: NavController) {
+
     }
 
     ionViewDidLoad() {
@@ -31,14 +32,10 @@ export class Tabs {
     }
 
     ionViewWillEnter() {
-        if (this.tabRef.getSelected() == this.tabRef.getByIndex(0)) {
-            this.menuController.enable(true);
-        }
         console.log('ionViewWillEnter');
     }
 
     ionViewWillLeave() {
-        this.menuController.enable(false);
         console.log('ionViewWillLeave');
     }
 

@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
 import {NavController, ToastController} from 'ionic-angular';
-import {PersonInfo} from "../../menuOptions/person-info/person-info";
-import {OptionIntroduce} from "../../menuOptions/option-introduce/option-introduce";
-import {BeginnerHelp} from "../../menuOptions/beginner-help/beginner-help";
-import {LabelManager} from "../../menuOptions/label-manager/label-manager";
-import {ComplaintSuggest} from "../../menuOptions/complaint-suggest/complaint-suggest";
+import {OptionIntroduce} from "../../personal-setting-module/option-introduce/option-introduce";
+import {BeginnerHelp} from "../../personal-setting-module/beginner-help/beginner-help";
+import {LabelManager} from "../../personal-setting-module/label-manager/label-manager";
+import {ComplaintSuggest} from "../../personal-setting-module/complaint-suggest/complaint-suggest";
+import {PersonInfo} from "../person-info/person-info";
 
 /*
  Generated class for the PersonalSetting page.

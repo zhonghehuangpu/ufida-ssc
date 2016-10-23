@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
-import {FillBillForTravel} from "../home-module/fill-bill-for-travel/fill-bill-for-travel";
+import {FillBillForTravel} from "../home-pages/fill-bill-for-travel/fill-bill-for-travel";
 
 /*
  Generated class for the Home page.

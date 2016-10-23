@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {NavController, PopoverController} from 'ionic-angular';
-import {BillViewFilterPopover} from "../bill-module/bill-view-filter-popover/bill-view-filter-popover";
+import {BillViewFilterPopover} from "../bill-pages/bill-view-filter-popover/bill-view-filter-popover";
 
 /*
  Generated class for the Bill page.

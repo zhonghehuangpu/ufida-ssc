@@ -6,7 +6,7 @@ import {Tabs} from "../pages/tabs/tabs";
 @Component({
     templateUrl: 'app.html'
 })
-export class MyApp {
+export class App {
 
     @ViewChild(Nav) nav: Nav;
 

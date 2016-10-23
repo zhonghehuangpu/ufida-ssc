@@ -1,9 +1,9 @@
 import {Component} from '@angular/core';
 import {NavController, ToastController} from 'ionic-angular';
-import {OptionIntroduce} from "../../personal-setting-module/option-introduce/option-introduce";
-import {BeginnerHelp} from "../../personal-setting-module/beginner-help/beginner-help";
-import {LabelManager} from "../../personal-setting-module/label-manager/label-manager";
-import {ComplaintSuggest} from "../../personal-setting-module/complaint-suggest/complaint-suggest";
+import {OptionIntroduce} from "../../personal-setting-pages/option-introduce/option-introduce";
+import {BeginnerHelp} from "../../personal-setting-pages/beginner-help/beginner-help";
+import {LabelManager} from "../../personal-setting-pages/label-manager/label-manager";
+import {ComplaintSuggest} from "../../personal-setting-pages/complaint-suggest/complaint-suggest";
 import {PersonInfo} from "../person-info/person-info";
 
 /*

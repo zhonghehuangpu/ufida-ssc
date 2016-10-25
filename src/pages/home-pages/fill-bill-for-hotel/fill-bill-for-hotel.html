@@ -14,7 +14,7 @@
 
 
 <ion-content>
-    <ion-list>
+    <ion-list style="margin-bottom: 0;">
 
         <ion-item>
             <ion-label>
@@ -23,6 +23,31 @@
             <ion-input type="number" placeholder="请输入报销金额" clearInput></ion-input>
         </ion-item>
 
+    </ion-list>
+
+    <ion-list style="margin-bottom: 0;" radio-group [(ngModel)]="fapiaoType">
+
+        <ion-row no-padding>
+
+            <ion-col width-50>
+                <ion-item no-lines style="border-bottom: 1px solid #dedede;">
+                    <ion-label>普通发票</ion-label>
+                    <ion-radio color="calm" item-left value="ptfp"></ion-radio>
+                </ion-item>
+            </ion-col>
+            <ion-col width-50>
+                <ion-item no-lines style="border-bottom: 1px solid #dedede;">
+                    <ion-label>增值税发票</ion-label>
+                    <ion-radio color="calm" item-left value="zzsfp"></ion-radio>
+                </ion-item>
+            </ion-col>
+
+        </ion-row>
+
+
+    </ion-list>
+
+    <ion-list style="margin-bottom: 0;">
 
         <ion-grid no-padding>
 

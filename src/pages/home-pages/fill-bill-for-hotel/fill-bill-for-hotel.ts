@@ -13,6 +13,8 @@ import {NavController} from 'ionic-angular';
 })
 export class FillBillForHotel {
 
+    fapiaoType: string = 'ptfp'
+
     startDateTime: string = '2016-09-09';
 
     endDateTime: string = '2016-09-10';

@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
+import {NavController, ToastController} from 'ionic-angular';
 
 /*
  Generated class for the FillBillForPurchase page.
@@ -15,11 +15,21 @@ export class FillBillForPurchase {
 
     dateTime: string = '2016-09-09'
 
-    constructor(public navCtrl: NavController) {
+    constructor(public navCtrl: NavController,public toastCtrl: ToastController) {
     }
 
     ionViewDidLoad() {
         console.log('Hello FillBillForPurchase Page');
+    }
+
+    saveBill() {
+        let toast = this.toastCtrl.create({
+            message: '保存报帐信息成功',
+            duration: 3000
+        });
+        toast.present().then(()=> {
+            this.navCtrl.pop();
+        });
     }
 
 }

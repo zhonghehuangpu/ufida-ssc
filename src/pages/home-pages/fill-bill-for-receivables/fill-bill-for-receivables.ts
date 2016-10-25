@@ -14,7 +14,7 @@ import {NavController} from 'ionic-angular';
 export class FillBillForReceivables {
 
 
-    findType: string = 'phone';
+    findType: string = 'xj';
     findTypeView = {
         name: '现金',
         icon: 'logo-yen'

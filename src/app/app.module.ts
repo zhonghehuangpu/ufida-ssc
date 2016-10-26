@@ -11,6 +11,7 @@ import {SELF_PAGES} from "../pages/self-pages/self-pages";
 import {PERSONAL_SETTING_PAGES} from "../pages/personal-setting-pages/personal-setting-pages";
 import {SECURITY_PAGES} from "../pages/security-pages/security-pages";
 import {PLATFORMS_CONSTANT} from "../config/platform.config";
+import {COMPONENTS} from "../components/component.module";
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import {PLATFORMS_CONSTANT} from "../config/platform.config";
         ...BILL_PAGES,
         ...SELF_PAGES,
         ...PERSONAL_SETTING_PAGES,
-        ...SECURITY_PAGES
+        ...SECURITY_PAGES,
+        ...COMPONENTS
     ],
     imports: [
         IonicModule.forRoot(App, PLATFORMS_CONSTANT)

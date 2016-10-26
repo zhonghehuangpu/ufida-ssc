@@ -13,6 +13,21 @@ import {NavController, ToastController} from 'ionic-angular';
 })
 export class FillBillForOther {
 
+    dataList = [
+        {
+            name: '手机验证',
+            icon: 'ios-phone-portrait-outline',
+            value: 'phone'
+        },
+        {
+            name: '邮箱验证',
+            icon: 'ios-mail-outline',
+            value: 'email'
+        }
+    ];
+
+    value: string = 'email';
+
     constructor(public navCtrl: NavController, public toastCtrl: ToastController) {
     }
 

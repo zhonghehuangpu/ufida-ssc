@@ -14,12 +14,20 @@ import {ForgetPasswordForSetPassword} from "../forget-password-for-set-password/
 })
 export class ForgetPassword {
 
+
     findType: string = 'phone';
-    findTypeView = {
-        name: '手机验证',
-        icon: 'ios-phone-portrait-outline'
-    }
-    isFindTypeOpened: boolean = false;
+
+    findTypeList = [
+        {
+            name: '手机验证',
+            value: 'phone',
+            icon: 'ios-phone-portrait-outline'
+        }, {
+            name: '邮箱验证',
+            value: 'email',
+            icon: 'ios-mail-outline'
+        }
+    ];
 
     constructor(public navCtrl: NavController) {
     }

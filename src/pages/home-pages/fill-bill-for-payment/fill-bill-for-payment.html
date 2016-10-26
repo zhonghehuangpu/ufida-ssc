@@ -57,37 +57,7 @@
 
         <ion-card style="margin-top: 0;">
 
-            <button ion-item (click)="triggerFindTypeCard();" detail-none>
-                <ion-icon color="calm" [name]="findTypeView.icon" item-left></ion-icon>
-                {{findTypeView.name}}
-                <ion-icon color="calm" [name]="!!isFindTypeOpened?'ios-arrow-dropup':'ios-arrow-dropdown'"
-                          item-right></ion-icon>
-            </button>
-
-            <ion-list [hidden]="!isFindTypeOpened" [(ngModel)]="findType" radio-group>
-
-                <ion-item>
-                    <ion-icon color="calm" name="logo-yen" item-left></ion-icon>
-                    <ion-label>现金</ion-label>
-                    <ion-radio color="calm" value="xj"
-                               (ionSelect)="findTypeChoice('现金','logo-yen')"></ion-radio>
-                </ion-item>
-
-                <ion-item>
-                    <ion-icon color="calm" name="ios-card-outline" item-left></ion-icon>
-                    <ion-label>转账</ion-label>
-                    <ion-radio color="calm" value="zz"
-                               (ionSelect)="findTypeChoice('转账','ios-card-outline')"></ion-radio>
-                </ion-item>
-
-                <ion-item>
-                    <ion-icon color="calm" name="ios-cash-outline" item-left></ion-icon>
-                    <ion-label>汇票</ion-label>
-                    <ion-radio color="calm" value="hp"
-                               (ionSelect)="findTypeChoice('汇票','ios-cash-outline')"></ion-radio>
-                </ion-item>
-
-            </ion-list>
+            <dropdown [dataList]="payTypeList" [(value)]="payType"></dropdown>
 
         </ion-card>
 

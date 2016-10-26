@@ -14,16 +14,27 @@ import {NavController, ToastController} from 'ionic-angular';
 export class FillBillForReceivables {
 
 
-    findType: string = 'xj';
-    findTypeView = {
-        name: '现金',
-        icon: 'logo-yen'
-    }
-    isFindTypeOpened: boolean = false;
+    payType: string = 'xj';
+    payTypeList = [
+        {
+            name: '现金',
+            value: 'xj',
+            icon: 'logo-yen'
+        },
+        {
+            name: '转账',
+            value: 'zz',
+            icon: 'ios-card-outline'
+        }, {
+            name: '汇票',
+            value: 'hp',
+            icon: 'ios-cash-outline'
+        }
+    ]
 
     dateTime: string = '2016-09-09'
 
-    constructor(public navCtrl: NavController,public toastCtrl: ToastController) {
+    constructor(public navCtrl: NavController, public toastCtrl: ToastController) {
     }
 
     ionViewDidLoad() {
